@@ -1,8 +1,16 @@
+import { FaUser } from "react-icons/fa6";
+import { IoCall } from "react-icons/io5";
+import css from './Contact.module.css'
 
-
-const Contact = () => {
+const Contact = ({contact:{name, number}}) => {
   return (
-    <div>Contact</div>
+    <div className={css.container}>
+      <div className={css.contactWrap}>
+      <p className={css.field}><FaUser />{name}</p>
+      <p className={css.field}><IoCall />{number}</p>
+      </div>
+      <button className={css.deleteBtn} type="button">Delete</button>
+    </div>
   )
 }
 
